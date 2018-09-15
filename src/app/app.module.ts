@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CustomerItemComponent } from './customer/customer-item/customer-item.component';
+import { NetbankingComponent } from './netbanking/netbanking.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CustomerItemComponent } from './customer/customer-item/customer-item.co
     CustomerEditComponent,
     CustomerListComponent,
     CustomerItemComponent,
+    NetbankingComponent,
   ],
   imports: [
     BrowserModule,
