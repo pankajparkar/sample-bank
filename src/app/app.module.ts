@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+import { CustomerItemComponent } from './customer/customer-item/customer-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { LoginComponent } from './login/login.component';
     DashboardComponent,
     FooterComponent,
     LoginComponent,
+    CustomerEditComponent,
+    CustomerListComponent,
+    CustomerItemComponent,
   ],
   imports: [
     BrowserModule,
