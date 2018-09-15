@@ -9,7 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
-import { CustomerItemComponent } from './customer/customer-item/customer-item.component';
+import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
 import { NetbankingComponent } from './netbanking/netbanking.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { NetbankingComponent } from './netbanking/netbanking.component';
     LoginComponent,
     CustomerEditComponent,
     CustomerListComponent,
-    CustomerItemComponent,
+    CustomerProfileComponent,
     NetbankingComponent,
   ],
   imports: [

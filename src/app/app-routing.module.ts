@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'netbanking', component: NetbankingComponent },
   { path: 'customers', component: CustomerListComponent },
-  { path: 'customers/edit/:id', component: CustomerEditComponent },
+  { path: 'customers/:id', component: CustomerEditComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'dashboard' }
 ]
