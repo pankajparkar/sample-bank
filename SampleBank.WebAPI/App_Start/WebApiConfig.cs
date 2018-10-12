@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SampleBank.WebAPI
 {
@@ -7,6 +8,9 @@ namespace SampleBank.WebAPI
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            // https://enable-cors.org/server_aspnet.html
+            var corsAttr = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(corsAttr);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
