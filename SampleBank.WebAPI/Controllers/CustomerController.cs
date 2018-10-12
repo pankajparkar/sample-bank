@@ -6,26 +6,16 @@ using SampleBank.WebAPI.Models;
 
 namespace SampleBank.WebAPI.Controllers
 {
-    [Route("customer")]
     public class CustomerController : ApiController
     {
+        public IEnumerable<Customer> GetAll()
+        {
+            return CustomerList.list;
+        }
+
         public Customer Get(int id)
         {
             return CustomerList.list.FirstOrDefault(i => i.Id == id);
-        }
-
-        [Route("list")]
-        public IEnumerable<Customer> GetAll()
-        {
-            if(CustomerList.list.Count == 0){
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-                CustomerList.list.Add(new Customer(1, "Pankaj", 10000, true, CustomerType.Current, 1, 400072));
-            }
-            return CustomerList.list;
         }
 
         public Customer Post(Customer customer) {
