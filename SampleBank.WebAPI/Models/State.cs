@@ -1,7 +1,7 @@
 ﻿using System;
 namespace SampleBank.WebAPI.Models
 {
-    public class State
+    public class City
     {
         public int Id { get; set; }
         public string Name { get; set; }

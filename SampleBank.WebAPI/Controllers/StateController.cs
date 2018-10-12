@@ -6,15 +6,15 @@ using SampleBank.WebAPI.Data;
 
 namespace SampleBank.WebAPI.Controllers
 {
-    public class StateController : ApiController
+    public class CityController : ApiController
     {
-        public State Get(int id) {
-            return StateList.list.FirstOrDefault(i => i.Id == id);
+        public City Get(int id) {
+            return CityList.list.FirstOrDefault(i => i.Id == id);
         }
 
-        public List<State> GetAll()
+        public List<City> GetAll()
         {
-            return StateList.list;
+            return CityList.list;
         }
     }
 }

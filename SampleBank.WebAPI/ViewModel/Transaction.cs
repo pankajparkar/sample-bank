@@ -11,6 +11,5 @@ namespace SampleBank.WebAPI.ViewModel
         public int CustomerId { get; set; }
         public int BeneficieryId { get; set; }
         public int Amount { get; set; }
-        public TransactionType TransactionType { get; set; }
     }
 }

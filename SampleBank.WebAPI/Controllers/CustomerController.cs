@@ -14,6 +14,20 @@ namespace SampleBank.WebAPI.Controllers
             return CustomerList.list;
         }
 
+        [Route("search")]
+        public IEnumerable<Customer> GetSearch(string name, CustomerType? customerType, int? cityId)
+        {
+            var result = new List<Customer>();
+            var list = CustomerList.list;
+            if (!String.IsNullOrWhiteSpace(name))
+                result = list.FindAll(i => i.FirstName == name || i.LastName == name);
+            if (customerType != null)
+                result = result.FindAll(i => i.CustomerType == customerType);
+            if (cityId != null)
+                result = result.FindAll(i => i.CityId == cityId);
+            return result;
+        }
+
         public Customer Get(int id)
         {
             return CustomerList.list.FirstOrDefault(i => i.Id == id);
@@ -31,10 +45,11 @@ namespace SampleBank.WebAPI.Controllers
                     Id = ++id
                 };
             }
-            existingCustomer.Name = customer.Name; 
+            existingCustomer.FirstName = customer.FirstName; 
+            existingCustomer.LastName = customer.LastName;
             existingCustomer.Balance = customer.Balance; 
             existingCustomer.CustomerType = customer.CustomerType; 
-            existingCustomer.StateId = customer.StateId;
+            existingCustomer.CityId = customer.CityId;
             existingCustomer.PinCode = customer.PinCode;
             return existingCustomer;
         }
