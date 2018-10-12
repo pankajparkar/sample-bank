@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
@@ -97,9 +96,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Models\CustomerType.cs" />
+    <Compile Include="Models\GenderEnum.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\CustomerList.cs" />
-    <Compile Include="Models\StateList.cs" />
+    <Compile Include="Data\CustomerList.cs" />
+    <Compile Include="Data\StateList.cs" />
     <Compile Include="Models\State.cs" />
     <Compile Include="Controllers\StateController.cs" />
   </ItemGroup>

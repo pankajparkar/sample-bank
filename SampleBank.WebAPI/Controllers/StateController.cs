@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Http;
 using SampleBank.WebAPI.Models;
+using SampleBank.WebAPI.Data;
 
 namespace SampleBank.WebAPI.Controllers
 {

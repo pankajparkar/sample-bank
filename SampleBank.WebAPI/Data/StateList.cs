@@ -1,7 +1,8 @@
 ﻿
+using SampleBank.WebAPI.Models;
 using System.Collections.Generic;
 
-namespace SampleBank.WebAPI.Models
+namespace SampleBank.WebAPI.Data
 {
     public class StateList
     {

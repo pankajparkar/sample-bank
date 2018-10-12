@@ -1,7 +1,7 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using SampleBank.WebAPI.Models;
 
-namespace SampleBank.WebAPI.Models
+namespace SampleBank.WebAPI.Data
 {
     public class CustomerList
     {

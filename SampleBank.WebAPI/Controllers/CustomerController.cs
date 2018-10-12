@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using SampleBank.WebAPI.Models;
+using SampleBank.WebAPI.Data;
 
 namespace SampleBank.WebAPI.Controllers
 {
@@ -25,8 +26,9 @@ namespace SampleBank.WebAPI.Controllers
             var existingCustomer = CustomerList.list.FirstOrDefault(c => c.Id == customer.Id);
             // If it is new customer then create new object and assign new Id
             if (existingCustomer == null) {
+                var id = CustomerList.list.Max(i => i.Id);
                 existingCustomer = new Customer { 
-                    Id = 1
+                    Id = ++id
                 };
             }
             existingCustomer.Name = customer.Name; 
