@@ -10,9 +10,9 @@ namespace SampleBank.WebAPI.Data
         {
             new State { Id = 1, Name = "Akola", Description = "Akola" },
             new State { Id = 2, Name = "Amaravati", Description = "Amaravati" },
-            new State { Id = 1, Name = "Maharashtra", Description = "Maharashtra" },
-            new State { Id = 1, Name = "Pune", Description = "Pune" },
-            new State { Id = 1, Name = "Ratnagiri", Description = "Ratnagiri" }
+            new State { Id = 3, Name = "Maharashtra", Description = "Maharashtra" },
+            new State { Id = 4, Name = "Pune", Description = "Pune" },
+            new State { Id = 5, Name = "Ratnagiri", Description = "Ratnagiri" }
         };
     }
 }
