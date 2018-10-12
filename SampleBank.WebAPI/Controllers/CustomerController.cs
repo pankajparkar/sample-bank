@@ -14,7 +14,7 @@ namespace SampleBank.WebAPI.Controllers
             return CustomerList.list;
         }
 
-        [Route("search")]
+        [Route("search/criteria")]
         public IEnumerable<Customer> GetSearch(string name, CustomerType? customerType, int? cityId)
         {
             var result = new List<Customer>();
