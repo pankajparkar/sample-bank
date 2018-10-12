@@ -97,6 +97,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerList.cs" />
+    <Compile Include="Models\StateList.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Controllers\StateController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
