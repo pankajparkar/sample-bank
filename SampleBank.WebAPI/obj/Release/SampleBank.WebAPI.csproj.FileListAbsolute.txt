@@ -1,0 +1,16 @@
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\SampleBank.WebAPI.dll.config
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\SampleBank.WebAPI.dll
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Http.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Http.Cors.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Razor.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Helpers.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.WebPages.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Mvc.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\bin\Newtonsoft.Json.xml
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\obj\Release\SampleBank.WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\obj\Release\SampleBank.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\obj\Release\SampleBank.WebAPI.dll
