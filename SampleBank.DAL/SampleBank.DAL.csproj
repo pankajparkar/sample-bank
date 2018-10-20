@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQLHelper.cs" />
     <Content Include="Path.sql" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerType.cs" />
@@ -51,6 +52,12 @@
     <Compile Include="Repository\Interface\ICityRepository.cs" />
     <Compile Include="Repository\Interface\ICustomerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleBank.WebAPI\SampleBank.Core\SampleBank.Core.csproj">
+      <Project>{9cc0fe47-6c36-41d9-be21-12924eff9e20}</Project>
+      <Name>SampleBank.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,13 +2,13 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace SampleBank.Core
+namespace SampleBank.DAL
 {
 
     /// <summary>
     /// An ADO.NET helper class
     /// </summary>
-    public class SQLHelper : IDisposable
+    class SQLHelper : IDisposable
     {
         // Internal members
         protected string _connString = null;
