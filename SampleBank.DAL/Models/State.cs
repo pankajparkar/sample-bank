@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SampleBank.WebAPI.Models
+namespace SampleBank.DAL.Models
 {
     public class City
     {

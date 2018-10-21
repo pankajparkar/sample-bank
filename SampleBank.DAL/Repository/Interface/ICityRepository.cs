@@ -1,9 +1,9 @@
-﻿using SampleBank.WebAPI.Models;
+﻿using SampleBank.DAL.Models;
 using System.Collections.Generic;
 
 namespace SampleBank.DAL
 {
-    interface ICityRepository
+    public interface ICityRepository
     {
         List<City> GetAll();
     }

@@ -1,4 +1,6 @@
-﻿CREATE TABLE City (
+﻿USE SampleBank
+
+CREATE TABLE City (
 	Id INT NOT NULL IDENTITY(1, 1),
 	Name NVARCHAR(100) NOT NULL,
 	Description NVARCHAR(100) NOT NULL
@@ -10,12 +12,14 @@ GO
 
 CREATE TABLE Customer (
 	Id INT NOT NULL IDENTITY(1, 1),
+	Guid uniqueidentifier NOT NULL DEFAULT NEWID(),
 	FirstName NVARCHAR(100) NOT NULL,
 	LastName NVARCHAR(100) NOT NULL,
 	Balance DECIMAL(28, 2) NOT NULL,
 	CustomerType NVARCHAR(100) NOT NULL,
 	Gender NVARCHAR(100) NOT NULL,
 	IsActive BIT NOT NULL,
+	PinCode INT NULL,
 	CityId INT NOT NULL
 )
 
@@ -47,6 +51,7 @@ CREATE PROCEDURE CreateCustomer (
 	@CustomerType NVARCHAR(100),
 	@Gender NVARCHAR(100),
 	@IsActive BIT,
+	@PinCode INT,
 	@CityId INT
 ) 
 AS
@@ -58,6 +63,7 @@ BEGIN
            ,[CustomerType]
            ,[Gender]
            ,[IsActive]
+		   ,[PinCode]
            ,[CityId])
      VALUES (
 			@FirstName,
@@ -66,6 +72,7 @@ BEGIN
 			@CustomerType,
 			@Gender,
 			@IsActive,
+			@PinCode,
 			@CityId
 		)
 END
@@ -80,6 +87,7 @@ CREATE PROCEDURE UpdateCustomer (
 	@CustomerType NVARCHAR(100),
 	@Gender NVARCHAR(100),
 	@IsActive BIT,
+	@PinCode INT,
 	@CityId INT
 ) 
 AS
@@ -91,6 +99,7 @@ BEGIN
         [CustomerType] = @CustomerType,
         [Gender] = @Gender,
         [IsActive] = @IsActive,
+        [PinCode] = @PinCode,
         [CityId] = @CityId
     WHERE Id = @Id
 END
@@ -117,3 +126,31 @@ BEGIN
 END
 
 GO 
+
+CREATE PROCEDURE GetCustomers (
+	@Name NVARCHAR(100),
+	@CustomerType NVARCHAR(100),
+	@CityId INT
+) 
+AS
+BEGIN
+	DECLARE @NameLike NVARCHAR(200) = '%' + ISNULL(@Name, '') + '%'
+	SELECT c.Id,
+		c.Guid,
+		c.[FirstName]
+        ,c.[LastName]
+        ,c.[Balance]
+        ,c.[CustomerType]
+        ,c.[Gender]
+        ,c.[IsActive]
+		,c.[PinCode]
+        ,c.[CityId]
+	FROM Customer c
+	WHERE (@Name IS NULL OR c.FirstName LIKE @NameLike OR c.LastName LIKE @NameLike) AND
+		(@CustomerType IS NULL OR @CustomerType = c.CustomerType) AND
+		(@CityId IS NULL OR @CityId = c.CityId)
+END
+
+GO 
+
+--EXEC GetCustomers NULL, NULL, NUll

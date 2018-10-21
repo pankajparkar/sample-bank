@@ -1,8 +1,8 @@
-C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.csprojResolveAssemblyReference.cache
-C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\bin\Debug\SampleBank.DAL.dll
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\bin\Debug\SampleBank.DAL.pdb
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\bin\Debug\SampleBank.Core.dll
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\bin\Debug\SampleBank.Core.pdb
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.dll
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.DAL\obj\Debug\SampleBank.DAL.pdb

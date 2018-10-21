@@ -1,5 +1,6 @@
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\bin\Debug\SampleBank.Core.dll
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\bin\Debug\SampleBank.Core.pdb
+C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\obj\Debug\SampleBank.Core.csprojResolveAssemblyReference.cache
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\obj\Debug\SampleBank.Core.csproj.CoreCompileInputs.cache
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\obj\Debug\SampleBank.Core.dll
 C:\Users\Mr.Pankaj\Documents\GitHub\sample-bank\SampleBank.WebAPI\SampleBank.Core\obj\Debug\SampleBank.Core.pdb
