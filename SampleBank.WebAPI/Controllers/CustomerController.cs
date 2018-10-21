@@ -17,15 +17,15 @@ namespace SampleBank.WebAPI.Controllers
             _customerRepository = new CustomerRepository();
         }
 
-        public List<Customer> GetAll()
+        public List<Customer> GetAll(string name, CustomerType? customerType, int? cityId)
         {
-            var result = _customerRepository.GetAll();
+            var result = _customerRepository.GetAll(name, customerType, cityId);
             return result;
         }
 
         public Customer Get(int id)
         {
-            var customers = _customerRepository.GetAll();
+            var customers = _customerRepository.GetAll(null, null, null);
             var customer = customers.FirstOrDefault(i => i.Id == id);
             return customer;
         }

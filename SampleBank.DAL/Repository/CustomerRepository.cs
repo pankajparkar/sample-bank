@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using SampleBank.DAL.Models;
@@ -27,12 +28,17 @@ namespace SampleBank.DAL.Repository
             return customer;
         }
 
-        public List<Customer> GetAll()
+        private object getValueOrNull(object value)
+        {
+            return value != null ? value : DBNull.Value;
+        }
+
+        public List<Customer> GetAll(string name, CustomerType? customerType, int? cityId)
         {
             var customers = new List<Customer>();
             var query = "EXEC GetCustomers";
             using (SQLHelper db = new SQLHelper(connectionString))
-            using (SqlDataReader rdr = db.ExecDataReader(query))
+            using (SqlDataReader rdr = db.ExecDataReader(query, "@Name", getValueOrNull(name), "@CustomerType", getValueOrNull(customerType), "@CityId", getValueOrNull(cityId)))
             {
                 if (rdr.HasRows)
                 {
@@ -75,7 +81,7 @@ namespace SampleBank.DAL.Repository
             using (SQLHelper db = new SQLHelper(connectionString))
             {
                 // TODO: check for operation completion
-                db.ExecNonQuery(query, customer.Id, existingCustomer.FirstName, existingCustomer.LastName, existingCustomer.Balance, existingCustomer.CustomerType, existingCustomer.Gender, existingCustomer.IsActive, existingCustomer.PinCode, existingCustomer.CityId);
+                db.ExecNonQuery(query, "@Id", customer.Id, "@FirstName", existingCustomer.FirstName, "@LastName", existingCustomer.LastName, "@Balance", existingCustomer.Balance, "@CustomerType", existingCustomer.CustomerType, "@Gender", existingCustomer.Gender, "@IsActive", existingCustomer.IsActive, "@PinCode", existingCustomer.PinCode, "@CityId", existingCustomer.CityId);
             }
             return customer;
         }
@@ -86,7 +92,7 @@ namespace SampleBank.DAL.Repository
             using (SQLHelper db = new SQLHelper(connectionString))
             {
                 // TODO: check for operation completion
-                db.ExecNonQuery(query, customer.Id, customer.FirstName, customer.LastName, customer.Balance, customer.CustomerType, customer.Gender, customer.IsActive, customer.PinCode, customer.CityId);
+                db.ExecNonQuery(query, "@Id", customer.Id, "@FirstName", customer.FirstName, "@LastName", customer.LastName, "@Balance", customer.Balance, "@CustomerType", customer.CustomerType, "@Gender", customer.Gender, "@IsActive", customer.IsActive, "@PinCode", customer.PinCode, "@CityId", customer.CityId);
             }
             return customer;
         }
