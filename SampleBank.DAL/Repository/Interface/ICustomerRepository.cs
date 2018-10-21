@@ -6,5 +6,9 @@ namespace SampleBank.DAL
     public interface ICustomerRepository
     {
         List<Customer> GetAll();
+
+        Customer UpdateCustomer(Customer customer);
+
+        Customer CreateCustomer(Customer customer);
     }
 }

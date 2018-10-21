@@ -153,4 +153,47 @@ END
 
 GO 
 
+CREATE PROCEDURE GetCustomer (
+	@Id INT
+) 
+AS
+BEGIN
+	SELECT c.Id,
+		c.Guid,
+		c.[FirstName]
+        ,c.[LastName]
+        ,c.[Balance]
+        ,c.[CustomerType]
+        ,c.[Gender]
+        ,c.[IsActive]
+		,c.[PinCode]
+        ,c.[CityId]
+	FROM Customer c
+	WHERE c.Id = @Id
+END
+
+GO 
+
+
+CREATE PROCEDURE GetCities
+AS
+BEGIN
+	SELECT c.Id,
+		c.Name,
+		c.Description
+	FROM City c
+END
+
+GO 
+
+INSERT INTO City VALUES ('Akola', 'Akola'),
+('Amaravati', 'Amaravati'),
+('Maharashtra', 'Maharashtra'),
+('Pune', 'Pune'),
+('Ratnagiri', 'Ratnagiri')
+
+GO
+
 --EXEC GetCustomers NULL, NULL, NUll
+
+--EXEC GetCities

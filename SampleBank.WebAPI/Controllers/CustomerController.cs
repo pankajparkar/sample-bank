@@ -2,42 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using SampleBank.WebAPI.Models;
 using SampleBank.WebAPI.Data;
+using SampleBank.DAL;
+using SampleBank.DAL.Repository;
+using SampleBank.DAL.Models;
 
 namespace SampleBank.WebAPI.Controllers
 {
     public class CustomerController : ApiController
     {
-        public IEnumerable<Customer> GetAll()
+        private ICustomerRepository _customerRepository;
+        public CustomerController()
         {
-            return CustomerList.list;
+            _customerRepository = new CustomerRepository();
+        }
+
+        public List<Customer> GetAll()
+        {
+            var result = _customerRepository.GetAll();
+            return result;
         }
 
         public Customer Get(int id)
         {
-            return CustomerList.list.FirstOrDefault(i => i.Id == id);
+            var customers = _customerRepository.GetAll();
+            var customer = customers.FirstOrDefault(i => i.Id == id);
+            return customer;
         }
 
         public Customer Post(Customer customer) {
-            if (customer.Id <= 0) {
-                throw new ApplicationException("Id field is required");
-            }
-            var existingCustomer = CustomerList.list.FirstOrDefault(c => c.Id == customer.Id);
-            // If it is new customer then create new object and assign new Id
-            if (existingCustomer == null) {
-                var id = CustomerList.list.Max(i => i.Id);
-                existingCustomer = new Customer { 
-                    Id = ++id
-                };
-            }
-            existingCustomer.FirstName = customer.FirstName; 
-            existingCustomer.LastName = customer.LastName;
-            existingCustomer.Balance = customer.Balance; 
-            existingCustomer.CustomerType = customer.CustomerType; 
-            existingCustomer.CityId = customer.CityId;
-            existingCustomer.PinCode = customer.PinCode;
-            return existingCustomer;
+            Customer cust;
+            if(customer.Id <= 0)
+                cust = _customerRepository.CreateCustomer(customer);
+            else 
+                cust = _customerRepository.UpdateCustomer(customer);
+            return cust;
         }
     }
 }
