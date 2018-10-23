@@ -7,7 +7,7 @@ import { CustomerService } from 'src/app/services/customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customers: any[];
+  customers: any;
   constructor(private customerService: CustomerService) { }
 
   getCustomers() {
@@ -16,6 +16,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getCustomers();
   }
 
 }

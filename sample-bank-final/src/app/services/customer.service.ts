@@ -18,12 +18,12 @@ export class CustomerService {
     return this.http.get(`${apiUrl}/api/customer/${id}`);
   }
 
-  filterCustomers(name?: string, customerType?: string, cityId?: number) {
+  filterCustomers(name?: string, customerType?: string, cityId?: string) {
     return this.http.get(`${apiUrl}/api/customer`, {
       params: {
-        name: name,
-        customerType: customerType,
-        cityId: cityId
+        name: name || '',
+        customerType: customerType|| '',
+        cityId: cityId|| ''
       }
     });
   }

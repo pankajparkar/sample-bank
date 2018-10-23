@@ -50,13 +50,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Pankaj</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Anil</td>
+        <tr *ngFor="let customer of customers">
+          <td>{{customer.Id}}</td>
+          <td>{{customer.FirstName}}</td>
+          <td>{{customer.LastName}}</td>
+          <td>{{customer.PinCode}}</td>
+          <td>{{customer.IsActive}}</td>
+          <td>{{customer.Gender}}</td>
+          <td>{{customer.CustomerType}}</td>
+          <td>{{customer.Balance}}</td>
         </tr>
       </tbody>
     </table>
